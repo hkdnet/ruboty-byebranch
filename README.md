@@ -1,6 +1,6 @@
 # Ruboty::Byebranch
 
-An Ruboty Handler + Actions to Delete merged branches.
+A Ruboty Handler + Actions to Delete merged branches.
 
 [Ruboty](https://github.com/r7kamura/ruboty) is Chat bot framework. Ruby + Bot = Ruboty
 
