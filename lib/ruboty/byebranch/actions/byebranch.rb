@@ -3,12 +3,18 @@ module Ruboty
     module Actions
       class Byebranch < Ruboty::Actions::Base
         def call
-          message.reply(byebranch)
+          msg = byebranch
+          message.reply(msg) unless silent?
         rescue => e
           message.reply(e.message)
         end
 
         private
+
+        def silent?
+          ENV['BYEBRANCH_SILENT']
+        end
+
         def byebranch
           clone_repository
           return "target branch is not exist." unless exist_target_branch?
